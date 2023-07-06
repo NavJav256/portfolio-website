@@ -240,6 +240,15 @@ p {
     margin: 15px 0;
 }
 
+.about .achievements li a {
+    color: var(--white)
+}
+
+.about .achievements li:hover,
+.about .achievements li a:hover {
+    color: var(--white);
+}
+
 /* === PROJECTS === */
 
 .projects .projects-link {
