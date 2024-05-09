@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My portfolio website">
+    <meta name="author" content="Navid Javdan">
+
+    <title>Puzzle Shooter | Blog</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/puzzleshooter.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Puzzle Shooter Blog</h1>
+    </header>
+
+    <main>
+
+        <article class="blog-card">
+            <h2>Teams</h2>
+            <p>Team colours, prevent friendly fire, team spawn points </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Lag Compensation Techniques</h2>
+            <p>Ammo pickups, Buff pickups (health, speed, jump, shield), pickup spawn class, secondary weapons, swap
+                weapons </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Pickups</h2>
+            <p>Ammo pickups, Buff pickups (health, speed, jump, shield), pickup spawn class, secondary weapons, swap
+                weapons </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Different weapon types</h2>
+            <p>Rocket projectiles, Hit scan weapons (pistol), Shotgun, weapon scatter, sniper + scope, grenade launcher,
+                grenades, reload animations, weapon outline effect </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Match States</h2>
+            <p>Timers, Syncing time between client and server </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Ammo</h2>
+            <p>Weapon ammo, carried ammo, reloading, combat states </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Player Stats</h2>
+            <p>Health, Kills, deaths, dying, elim animation, </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Weapon Aiming</h2>
+            <p>Crosshairs, zooming when aiming, </p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Firing the weapon</h2>
+            <p>Setup of projectile class, fire anim montage, hit targets, projectile movement, hit target needs to be
+                replicated, bullet shells, shell physics</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Creating a weapon</h2>
+            <p>Setup of weapon class, variable replication and rpcs, aim offsets, other animation stuff</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Creating a 3rd person character</h2>
+            <p>Movement, Animations etc</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Configuring the Server (Unreal Engine)</h2>
+            <p>adding simple game logic to the server, replicating GameLift matchmaking information on the server to the
+                clients such as what team each player belonged to, rejecting or accepting incoming player connections,
+                terminating player sessions when players disconnected from the server, recording match results and
+                player wins/losses in DynamoDB through an http request to an API Gateway method that invokes an AWS
+                Lambda function, terminating game sessions when games were "over"</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Configuring the Client (Unreal Engine)</h2>
+            <p>The client makes http requests to the REST API, which has various resources for various AWS Lambda
+                functions. The client uses a combination of the responses returned from the API to join an Unreal Engine
+                game server process hosted on an EC2 instance on a fleet. In the process, multiple clients interact with
+                the main menu UI in order to start and stop matchmaking tickets. If the GameLift matchmaking
+                configuration is able to make
+                a potential match with the existing active matchmaking requests, a match will be made, and GameLift will
+                try to find an available server process to host the game session on. Then, finally, the clients in that
+                match will get an update through their matchmaking tickets with the necessary information to connect to
+                the server.</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Client Service</h2>
+            <p>Creating the client service in the form of lambda functions and a rest API in Amazon API Gateway. The
+                functions in this client service involve making a matchmaking request, cancelling a matchmaking request,
+                polling for the status of a matchmaking request, and getting player data. These functions will later be
+                used by the client to connect to a game server process hosted on Amazon GameLift</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Login System (Cognito)</h2>
+            <p>Creating a Cognito user pool,
+                making a Cognito hosted UI,
+                accessing that hosted UI from a web browser widget inside Unreal Engine,
+                and made http requests from our Unreal Engine game client to Amazon API Gateway API endpoints that
+                called AWS Lambda functions.</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Matchmaking (FlexMatch)</h2>
+            <p>Creating a FlexMatch matchmaking configuration, attaching a matchmaking rule set to the matchmaker,
+                and making an SNS topic for receiving matchmaking event notifications in real time.
+                In the process, we also created a DynamoDb table to hold the latest information and status updates
+                with regards to matchmaking tickets and requests,
+                and subscribed a Lambda function to the SNS topic that writes parts of the messages published
+                by FlexMatch to SNS to that table in DynamoDb.</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Creating a fleet and queue</h2>
+            <p>This is the content of the first blog post. You can write anything you want here.</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Integrating the AWS GameLift SDK / Plugin</h2>
+            <p>This is the content of the first blog post. You can write anything you want here.</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+        <article class="blog-card">
+            <h2>Setting up Unreal Engine from Source</h2>
+            <p>This is the content of the first blog post. You can write anything you want here.</p>
+            <img src="placeholder-image.jpg" alt="Placeholder Image">
+            <p class="date">May 9, 2024</p>
+        </article>
+
+    </main>
+
+</body>
+
+</html>
